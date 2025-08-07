@@ -1,0 +1,33 @@
+
+    </ul>
+  </section>
+
+
+  <script>
+    
+    const text = "Hi, I'm Aarti Thakur";
+    const typingEl = document.getElementById("typing-text");
+    let i = 0;
+    function typeText() {
+      if (i <= text.length) {
+        typingEl.innerText = text.substring(0, i);
+        i++;
+        setTimeout(typeText, 100);
+      }
+    }
+    window.onload = typeText;
+
+  
+    const particles = document.getElementById("particles");
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement("div");
+      particle.classList.add("particle");
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      particles.appendChild(particle);
+    }
+  </script>
+</body>
+</html>
+
